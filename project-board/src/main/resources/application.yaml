@@ -1,6 +1,6 @@
 debug: false
 
-#auctuator? ?? endpoint
+#auctuator endpoint
 management:
   endpoints:
     web:
@@ -11,7 +11,7 @@ logging:
   level:
     com.fcboard.projectboard: debug
     org.springframework.servlet : debug #req, res log
-    org.hibernate.type.descriptor.sql.BasicBinder : trace #jpa ?? ?? ??(??? ???? ?? ??)
+    org.hibernate.type.descriptor.sql.BasicBinder : trace #jpa 쿼리 파라미터
 
 spring:
   datasource:
@@ -20,14 +20,13 @@ spring:
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    defer-datasource-initialization: true #???? ?? ??? ??(resource/data.sql)
+    defer-datasource-initialization: true
     hibernate.ddl-auto: create
     show-sql: true
-    properties: #?? ???? ???? ????? ??? ? ?? ??
-      hibernate.format_sql: true #?? ??? ?? ??? ??
-      hibernate.default_batch_fetch_size: 100 #??? 100??
-    h2.console.enabled: true
-    sql.init.mode: always #data.sql? ?? ????
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_batch_fetch_size: 100
+    sql.init.mode: always #data.sql
 
 ---
 ##테스트 디비용 프로필
