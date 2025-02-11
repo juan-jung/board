@@ -9,3 +9,7 @@ The API documentation is available in the following Google Sheets link:
 The ERD for the project is available at the following link:
 
 [ERD Diagram](https://www.erdcloud.com/d/EBTzGm8TtzLhLTajq)
+
+## References
+[lecture](https://fastcampus.co.kr/classroom/211368)
+[github](https://github.com/djkeh)
